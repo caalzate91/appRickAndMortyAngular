@@ -1,0 +1,33 @@
+<h1 class="text-center">Rick and Morty API</h1>
+<button (click)="getApi()">Get Info API</button>
+<main>
+  <div class="row">
+    <h3>
+      Resultado de la busqueda:
+      <small class="text-muted"> Total : {{totalCharacter}}</small>
+    </h3>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div class="col" *ngFor="let nameCharacter of namesCharacter">
+      <div class="card">
+        <img src={{nameCharacter.image}} class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{nameCharacter.name}}</h5>
+          <p class="card-text">Characteristics:</p>
+          <dl class="row">
+            <dt class="col-sm-5">Status:</dt>
+            <dd class="col-sm-7">{{nameCharacter.status}}</dd>
+            <dt class="col-sm-5">Species:</dt>
+            <dd class="col-sm-7">{{nameCharacter.species}}</dd>
+
+            <dt class="col-sm-5">Type:</dt>
+            <dd class="col-sm-7">{{nameCharacter.type}}</dd>
+
+            <dt class="col-sm-5">Gender:</dt>
+            <dd class="col-sm-7">{{nameCharacter.gender}}</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

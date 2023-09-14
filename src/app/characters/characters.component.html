@@ -1,0 +1,33 @@
+<main>
+  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal">Sobre mi serie favorita <b>Sherlock Holmes en Amazon Prime.</b> </h1>
+    <p class="fs-5 text-muted">Agrega a cada personaje que desees:</p>
+  </div>
+  <form class="row g-3 needs-validation" novalidate>
+    <div class="mb-3 row">
+      <div class="col-sm-9">
+        <label class="form-label">Nombre del personaje: </label>
+        <input class="form-control" type="text" name="nameCharacter" id="nameCharacter" [(ngModel)]='nameCharacter'>
+      </div>
+      <div class="col-sm-3 align-content-center">
+        <button class="btn btn-danger" (click)="onSendForm()">Agregar</button>
+      </div>
+    </div>
+  </form>
+  <div class="table-responsive">
+    <table class="table text-center">
+      <thead>
+      <tr>
+        <th class="col-sm-9 align-content-center">Nombre</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let name of namesCharacter">
+        <td>
+          {{name}}
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
